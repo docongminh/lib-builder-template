@@ -1,0 +1,30 @@
+{
+  "name": "template-library-typescript-v1",
+  "version": "1.0.0",
+  "description": "A Template to build up library typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/docongminh/template-library-typescript.git"
+  },
+  "author": "@minhdocs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/docongminh/template-library-typescript/issues"
+  },
+  "homepage": "https://github.com/docongminh/template-library-typescript#readme",
+  "dependencies": {
+    "template-library-typescript": "^1.0.0",
+    "template-library-typescript-v1": "^1.0.0"
+  }
+}
