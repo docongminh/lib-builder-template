@@ -1,11 +1,23 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "target": "es2015",
-      "declaration": true,
-      "outDir": "./dist"
-    },
-    "include": [
-      "src/**/*"
-    ]
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext", // commonjs
+    "declarationDir": "./types",
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "noImplicitAny": true,
+    "baseUrl": "./",
+    "paths": {"~/*": ["src/*"]},
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+ ]
 }
