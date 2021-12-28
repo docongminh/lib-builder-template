@@ -12,7 +12,10 @@
   "scripts": {
     "test": "jest",
     "build": "rollup -c",
-    "example": "ts-node --project tsconfig-example.json examples/test.ts"
+    "nodejs-example": "ts-node --project tsconfig.module.json examples/test.ts",
+    "commonjs-example": "npx webpack ./examples/commonjs/commonjs-test.ts -o ./examples/commonjs/bundle-commonjs",
+    "newlib": "npm install mmath.0.1",
+    "_test-dist": "rollup -c rollup-tests.config.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +31,18 @@
   "devDependencies": {
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
+    "karma": "^6.3.9",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage-istanbul-instrumenter": "^1.0.4",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-edge-launcher": "^0.4.2",
+    "karma-firefox-launcher": "^2.1.2",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-mocha": "^2.0.1",
+    "karma-qunit": "^4.1.2",
+    "karma-should": "^1.0.0",
+    "mocha": "^9.1.3",
     "rollup": "^2.62.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.1",
@@ -39,6 +54,10 @@
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
-    "mmath.0.1": "^1.0.0"
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.1.1",
+    "mmath.0.1": "^1.0.0",
+    "rollup-plugin-node-polyfills": "^0.2.1"
   }
 }
