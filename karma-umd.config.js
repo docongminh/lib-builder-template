@@ -15,8 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: "./umd.esm.js", type: "module" },
-      { pattern: "./tests.umd.js", type: "module" },
+      { pattern: "./index.js", type: "module" },
+      // { pattern: "./tests.umd.js", type: "module" },
     ],
 
 
