@@ -3,11 +3,11 @@ A template to implement typescript library
 
 - Main components:
  Implement libraries in three formats: `ECMAScript`, `standard`, `CommonJS`, and `UMD`.
- I used some main tools:
- * [Rollup](https://github.com/rollup/rollup): Package bundler
- * [Jest](https://github.com/facebook/jest): Test js script
- * [Karma](https://github.com/karma-runner/karma): Test ES & UMD modules
-  - Config
+ - I used some main tools:
+   * [Rollup](https://github.com/rollup/rollup): Package bundler
+   * [Jest](https://github.com/facebook/jest): Test js script
+   * [Karma](https://github.com/karma-runner/karma): Test ES & UMD modules
+  - Configures
     - In `package.json` file 
     ```js
       ...
