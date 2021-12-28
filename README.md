@@ -132,3 +132,7 @@ A template to implement typescript library
   - [ ] Cli script
 
 # Resource References
+ - [typescript-docs](https://www.typescriptlang.org/docs/handbook/esm-node.html)
+ - [declaration-ts](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
+ - [cli](https://github.com/Glinkis/create-ts-library/tree/master/lib)
+ - 
