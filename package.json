@@ -15,7 +15,7 @@
     "nodejs-example": "ts-node --project tsconfig.module.json examples/test.ts",
     "commonjs-example": "npx webpack ./examples/commonjs/commonjs-test.ts -o ./examples/commonjs/bundle-commonjs",
     "newlib": "npm install mmath.0.1",
-    "_test-dist": "rollup -c rollup-tests.config.js"
+    "test-dist": "rollup -c rollup-tests.config.js"
   },
   "repository": {
     "type": "git",
