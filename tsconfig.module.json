@@ -2,7 +2,6 @@
     "compilerOptions": {
       "target": "ESNext",
       "module": "commonjs",
-      "type": "module",
       "declarationDir": "./types",
       "declaration": true,
       "outDir": "./dist",

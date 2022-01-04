@@ -12,9 +12,9 @@
   "scripts": {
     "test": "jest",
     "build": "rollup -c rollup.config.js",
-    "build-example": "npm run build && cp -r ./dist ./examples",
-    "nodejs-example": "ts-node --project tsconfig.module.json examples/test.ts",
-    "commonjs-example": "npx webpack ./examples/commonjs/commonjs-test.ts -o ./examples/commonjs/bundle-commonjs"
+    "build-esm-umd-example": "npm run build && cp -r ./dist ./examples",
+    "run-nodejs-example": "ts-node --project tsconfig.module.json examples/nodejs-test.ts",
+    "build-cjs-example": "npx webpack ./examples/commonjs/commonjs-test.ts -o ./examples/commonjs/bundle-commonjs"
   },
   "repository": {
     "type": "git",
