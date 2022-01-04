@@ -97,10 +97,21 @@ A template to implement typescript library
     ```sh
       npm run build
     ```
-  - Test rollup
+  - Build UMD & ESM example
     ```sh
-      npm run test-dist
+       npm run build-example
     ```
+     Note: Install [live-server-web-extension](https://github.com/ritwickdey/live-server-web-extension) in vscode to run *go live server* test esm & umd html on browser
+   - Build commonjs example
+     ```sh
+        npm run build-cjs-example
+     ```
+     &&
+     open *commonjs-test.html*
+  - Run test nodejs
+   ```sh
+      npm run run-nodejs-example
+   ```
     
 # Usage Import Library
   - Nodejs
@@ -126,9 +137,10 @@ A template to implement typescript library
    [Pendding Todo]
 
 # TODO
-  - [ ] Add test UMD in browser
-  - [ ] Add test ESM in browser
-  - [ ] Test with karma
+  - [x] Add Example test UMD in browser
+  - [x] Add Example test ESM in browser
+  - [ ] Test after packaging
+  - [ ] Script automate publish npm package
   - [ ] Cli script
 
 # Resource References
