@@ -6,7 +6,6 @@ A template to implement typescript library
  - I used some main tools:
    * [Rollup](https://github.com/rollup/rollup): Package bundler
    * [Jest](https://github.com/facebook/jest): Test js script
-   * [Karma](https://github.com/karma-runner/karma): Test ES & UMD modules
   - Configures
     - In `package.json` file 
     ```js
@@ -107,7 +106,7 @@ A template to implement typescript library
         npm run build-cjs-example
      ```
      &&
-     open *commonjs-test.html*
+     open `commonjs-test.html` on browser
   - Run test nodejs
    ```sh
       npm run run-nodejs-example
