@@ -11,11 +11,10 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "rollup -c",
+    "build": "rollup -c rollup.config.js",
+    "build-example": "npm run build && cp -r ./dist ./examples",
     "nodejs-example": "ts-node --project tsconfig.module.json examples/test.ts",
-    "commonjs-example": "npx webpack ./examples/commonjs/commonjs-test.ts -o ./examples/commonjs/bundle-commonjs",
-    "newlib": "npm install mmath.0.1",
-    "test-dist": "rollup -c rollup-tests.config.js"
+    "commonjs-example": "npx webpack ./examples/commonjs/commonjs-test.ts -o ./examples/commonjs/bundle-commonjs"
   },
   "repository": {
     "type": "git",
