@@ -1,0 +1,13 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "declarationDir": "declarations",
+      "emitDeclarationOnly": true,
+      "stripInternal": true,
+      // Could not find a declaration file for module 'buffer-layout'
+      // ignore generate declaration for 'buffer-layout'
+      // follow merge: https://github.com/solana-labs/solana-program-library/issues/2534
+      "noImplicitAny": false
+    },
+    "include": ["src"],
+}

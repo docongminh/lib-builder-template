@@ -1,149 +1,22 @@
-# About Project
-A template to implement typescript library
+# Cross-chain core library
+A complete [monorepos](https://en.wikipedia.org/wiki/Monorepo) Cross-Chain library for multiple Blockchain Network
 
-- Main components:
- Implement libraries in three formats: `ECMAScript`, `standard`, `CommonJS`, and `UMD`.
- - I used some main tools:
-   * [Rollup](https://github.com/rollup/rollup): Package bundler
-   * [Jest](https://github.com/facebook/jest): Test js script
-  - Configures
-    - In `package.json` file 
-    ```js
-      ...
-      "main": "dist/index.common.js", //  CommonJS format.
-      "module": "dist/index.esm.js", // ES Modules format
-      "browser": "dist/index.js", // UMD format.
-      "types": "types/index.d.ts", // Set the typescript declaration file.
-      ...
+# Commands
+  - Pretty code
+  
+    ```bash
+      npm run pretty:fix
     ```
-    - Config rollup bundler in `rollup.config.js`
-     ```js
-      import typescript from 'rollup-plugin-typescript2';
-      import { terser } from "rollup-plugin-terser";
-      import pkg from './package.json';
-      export default {
-        external: Object.keys(pkg['dependencies'] || []),
-        input: './src/index.ts', // depend on customize library-name
-        plugins: [
-          typescript({
-            tsconfigDefaults: { compilerOptions: {} },
-            tsconfig: "tsconfig.json",
-            tsconfigOverride: { compilerOptions: {} },
-            useTsconfigDeclarationDir: true
-          }),
-          terser()
-        ],
-        output: [
-          // ES module (for bundlers) build.
-          {
-            format: 'esm',
-            file: pkg.module
-          },
-          // CommonJS (for Node) build.
-          {
-            format: 'cjs',
-            file: pkg.main
-          },
-          // browser-friendly UMD build
-          {
-            format: 'umd',
-            file: pkg.browser,
-            name: pkg.browser
-              .replace(/^.*\/|\.js$/g, '')
-              .replace(/([-_][a-z])/g, (group) => group.toUpperCase().replace('-', '').replace('_', ''))
-          }
-        ]
-      }
+  - Lint code
+  
+    ```bash
+      npm run lint:fix
     ```
-    Explained some keyword config in rollup and add on config test roll up in `rollup.tests.config.js` [see more in project]
-      |Name|Description|
-      |--|--|
-      |external|Comma-separate list of module IDs to exclude.|
-      |input|The bundle's entry point(s) (e.g. your main.js or app.js or index.js).|
-      |plugins|Plugins allow you to customise Rollup's behaviour by, for example,<br>transpiling code before bundling, or finding third-party modules in your node_modules folder.<br>Use rollup-plugin-typescript2 and rollup-plugin-terser.<br>rollup-plugin-typescript2 is a TypeScript loader, and this plugin reads "tsconfig.json" by default.<br>rollup-plugin-terser compresses source code.|
-      |output|The output destination of the bundle.<br>Three types of libraries, ES Modules, CommonJS, and UMD, are output.|
-    - 
-      
-   
-  - Output format library in `dist`
-    |ES Module|UMD|CommonJS|
-    |--|--|--|
-    |index.esm.js|index.js|index.common.js|
-  - Dependencies library support
-    
-    |Name|Description|
-    |--|--|
-    |typescript|Used to compile TypeScript source code into JavaScript.|
-    |ts-node|Used to execute TypeScript code on a node and immediately check the result.|
-    |tsconfig-paths|Used to resolve paths (alias) in tsconfig.json at runtime with ts-node.|
-    |rollup|Rollup is a module bundler.<br>Used to bundle ES Modules, CommonJS, and UMD libraries for distribution to clients.|
-    |rollup-plugin-typescript2|Plug-in for processing typescript with rollup.|
-    |rollup-plugin-terser|Used to compress bundle files.|
-    |jest|Jest is a library for testing JavaScript code.|
-    |@types/jest|Jest's type declaration.|
-    |ts-jest|A TypeScript preprocessor required to test projects written in TypeScript using Jest.|
-
-# Build & Publish package
-  - Install dependencies
-    ```sh
-      npm run install
-    ```
-  - Test with jest
-    ```sh
-      npm run test
-    ```
-  - Build
-    ```sh
-      npm run build
-    ```
-  - Build UMD & ESM example
-    ```sh
-       npm run build-example
-    ```
-     Note: Install [live-server-web-extension](https://github.com/ritwickdey/live-server-web-extension) in vscode to run *go live server* test esm & umd html on browser
-   - Build commonjs example
-     ```sh
-        npm run build-cjs-example
-     ```
-     &&
-     open `commonjs-test.html` on browser
-  - Run test nodejs
-   ```sh
-      npm run run-nodejs-example
-   ```
-    
-# Usage Import Library
-  - Nodejs
-    When publish on `npm package`, install and import
-    ```sh
-      import {add, div} from "package-name"
-    ```
-  - ES Modules Browser:
-    ```sh
-      <script type="module">
-        import { ethers } from "path/to/index.esm.js";
-      </script>
-    ```
-
-  - UMD Browser:
-
-    ```sh
-      <script src="path/to/umd.index.umd.js" type="text/javascript">
-      </script>
-    ```
-
-# Examples
-   [Pendding Todo]
-
-# TODO
-  - [x] Add Example test UMD in browser
-  - [x] Add Example test ESM in browser
-  - [ ] Test after packaging
-  - [ ] Script automate publish npm package
-  - [ ] Cli script
-
-# Resource References
- - [typescript-docs](https://www.typescriptlang.org/docs/handbook/esm-node.html)
- - [declaration-ts](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
- - [cli](https://github.com/Glinkis/create-ts-library/tree/master/lib)
- - 
+# Network Support
+  - [ ] Ethererum
+  - [ ] Binance Smart Chain
+  - [ ] Solana
+  - [ ] ...
+# Ref
+  - [Rollup](https://github.com/rollup/rollup)
+  - [lerna](https://github.com/lerna/lerna)

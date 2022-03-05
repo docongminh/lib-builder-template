@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>wallet</title>
+</head>
+<body>
+<script type="module">
+  import {helloworld} from './lib/index.esm.js';
+  console.log("ESM Module ")
+  helloworld()
+  
+</script>
+<script src="./lib/index.umd.js" type="text/javascript"></script>
+  <script>
+    console.log("UMD Module")
+    network.helloworld();
+</script>
+<script src="./lib/index.iife.js" type="text/javascript"></script>
+  <script>
+      console.log("IIFE Module")
+      network.helloworld()
+</script>
+</body>
+</html>
