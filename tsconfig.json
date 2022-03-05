@@ -15,6 +15,5 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true
   },
-  "include": [],
-  "exclude": []
+  "include": []
 }
