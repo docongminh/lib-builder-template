@@ -1,9 +1,24 @@
-# Cross-chain core library
-A complete [monorepos](https://en.wikipedia.org/wiki/Monorepo) Cross-Chain library for multiple Blockchain Network
-
+# Template build up library
+A complete [monorepos](https://en.wikipedia.org/wiki/Monorepo) template library for build up npm package
+- Stable
+- Reusability
+- Easy to use
+- Easy to understand structure
+- Completed Rollup bundler diversity modules (UMF, IFFE, ESM, Node Module)
 # Commands
 
-  -   
+  - Install dependencies
+    ```bash
+      npm install
+    ```
+  - Clean lerna
+    ```bash
+      npm run clean:lerna
+    ```
+  - Start lerna
+    ```bash
+      npm run lerna:start
+    ```
   - Pretty code
   
     ```bash
@@ -14,6 +29,6 @@ A complete [monorepos](https://en.wikipedia.org/wiki/Monorepo) Cross-Chain libra
     ```bash
       npm run lint:fix
     ```
-# Ref
+# References
   - [Rollup](https://github.com/rollup/rollup)
   - [lerna](https://github.com/lerna/lerna)
