@@ -11,6 +11,6 @@
     ```
   - publish npm (temporaral)
     ```bash
-      npm run publish:sub-1
+      npm run publish:sub1
     ```
 # Ref
