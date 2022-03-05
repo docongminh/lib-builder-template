@@ -1,18 +1,16 @@
-# @nekoglobal/networks
-
-A complete crypto network base support for cross-chain
-
+# @template/sub2
+  Sub-module
 # Commands
-  - Clean project
-    ```bash
-      npm run clean
-    ```
-  - build
+  - Build roll up bundle & generate type declarations
     ```bash
       npm run build
     ```
+  - Test cover
+    ```bash
+      npm run test:cover
+    ```
   - publish npm (temporaral)
     ```bash
-      npm run publish:network
+      npm run publish:sub2
     ```
 # Ref
