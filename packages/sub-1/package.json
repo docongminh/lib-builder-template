@@ -25,9 +25,8 @@
     "build": "npm run build:rollup && npm run typegen",
     "build:rollup": "rollup -c rollup.config.js",
     "typegen": "bash ./scripts/typegen.sh",
-    "publish:network": "npm publish --access public",
+    "publish:sub1": "npm publish --access public",
     "dev:test": "ts-node --project tsconfig.cjs.json src/index.ts",
-    "cplib": "cp -r ./lib ./tests",
     "clean": "rm -rf lib && rm -rf declarations && rm -rf tests/lib && rm -rf .nyc_output && rm -rf ./coverage"
   },
   "keywords": [
