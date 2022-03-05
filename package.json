@@ -1,53 +1,50 @@
 {
-	"name": "cross-chain-core",
-	"version": "1.0.0",
-	"description": "A complete core library cross-chain for Blockchain Network",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/neko-global/cross-chain-core.git"
-	},
-	"keywords": [
-		"Blockchain",
-		"cross-chain",
-		"crypto-wallet",
-		"crypto-currency"
-	],
-	"author": "@minhdocs",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/neko-global/cross-chain-core/issues"
-	},
-	"homepage": "https://github.com/neko-global/cross-chain-core#readme",
-	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.11.0",
-		"@typescript-eslint/parser": "^5.11.0",
-		"eslint": "^8.8.0",
-		"lerna": "^4.0.0"
-	},
-	"dependencies": {
-		"@babel/plugin-proposal-class-properties": "^7.16.7",
-		"@babel/plugin-proposal-private-methods": "^7.16.11",
-		"@babel/plugin-proposal-private-property-in-object": "^7.16.7",
-		"@babel/plugin-transform-runtime": "^7.16.10",
-		"@babel/preset-env": "^7.16.11",
-		"@babel/preset-typescript": "^7.16.7",
-		"@babel/register": "^7.17.0",
-		"@rollup/plugin-babel": "^5.3.0",
-		"@rollup/plugin-commonjs": "^21.0.1",
-		"@rollup/plugin-json": "^4.1.0",
-		"@rollup/plugin-node-resolve": "^13.1.3",
-		"@rollup/plugin-replace": "^3.0.1",
-		"@types/chai": "^4.3.0",
-		"@types/mocha": "^9.1.0",
-		"chai": "^4.3.6",
-		"esm": "^3.2.25",
-		"mocha": "^9.2.0",
-		"nyc": "^15.1.0",
-		"rimraf": "^3.0.2",
-		"rollup-plugin-dts": "^4.1.0",
-		"rollup-plugin-node-polyfills": "^0.2.1",
-		"rollup-plugin-terser": "^7.0.2",
-		"ts-node": "^10.5.0"
-	}
+  "name": "template-libray",
+  "version": "1.0.0",
+  "description": "A complete core library cross-chain for Blockchain Network",
+  "main": "index.js",
+  "scripts": {
+    "lerna:start": "npm run clean:lerna && npm run bootstrap",
+    "clean:lerna": "lerna clean --yes",
+    "bootstrap": "lerna bootstrap --hoist",
+    "test:cover": "lerna run --stream test:cover",
+    "clean:build": "lerna run --stream clean",
+    "lint": "set -ex; npm run pretty; eslint . --ext .js,.ts",
+    "lint:fix": "npm run pretty:fix && eslint . --fix --ext .js,.ts",
+    "pretty": "prettier --check ./packages/*/src/*.ts",
+    "pretty:fix": "prettier --write ./packages/*/src/*.ts",
+    "new-version": "lerna version --no-git-tag-version",
+    "pre-publish": "run-s new-version reset commit-version",
+    "npm-publish:latest": "lerna exec -- npm publish --access public",
+    "npm-publish:next": "lerna exec -- npm publish --access public --tag next",
+    "npm-publish:experimental": "lerna exec -- npm publish --access public --tag experimental",
+    "npm-publish:canary": "lerna exec -- npm publish --access public --tag canary",
+    "publish:latest": "run-s pre-publish npm-publish:latest",
+    "publish:next": "run-s pre-publish npm-publish:next",
+    "publish:experimental": "run-s pre-publish npm-publish:experimental",
+    "publish:canary": "run-s pre-publish npm-publish:canary"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neko-global/cross-chain-core.git"
+  },
+  "keywords": [
+    "template",
+    "library npm"
+  ],
+  "author": "@minhdocs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neko-global/cross-chain-core/issues"
+  },
+  "homepage": "https://github.com/neko-global/cross-chain-core#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.8.0",
+    "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
 }
